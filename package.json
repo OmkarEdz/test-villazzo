@@ -29,6 +29,7 @@
     "react-moment": "^0.9.6",
     "react-range": "^1.8.14",
     "react-slick": "^0.29.0",
+    "react-sticky-header": "^0.2.0",
     "sparkpost": "^2.1.4",
     "strapi-provider-upload-cloudinary": "^3.6.10"
   },

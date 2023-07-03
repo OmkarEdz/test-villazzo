@@ -216,6 +216,7 @@ img {
   width: 338px;
   margin-left:20px;
   margin-top:10px;
+  transition: 0.5s all;
 }
 .main-logo span {
   display: block;
@@ -385,7 +386,7 @@ img {
   display: block;
   width: auto;
 }
-.dropdown-item:hover {
+.navbar-light .navbar-nav .nav-item:hover .dropdown-menu .dropdown-item:hover {
   color:#f8de7f;
   font-family: 'Gotham', sans-serif;
   background: none !important;
@@ -421,12 +422,12 @@ img {
   color: #000;
     text-decoration: none;
     background-color: #f8de7f;
-    padding: 12px 77px;
+    padding: 8px 50px;
     font-size: 20px;
     transition-duration: .5s;
-    font-family:'Gotham',sans-serif;
+    font-family:'Gotham Medium',sans-serif;
     font-weight: 500;
-    line-height: 29px;
+    line-height: 30px;
     border: 1px solid #f8de7f;
 }
 .inqury-btn a:hover {
@@ -937,7 +938,7 @@ h3.propertytxt {
 
 /* Home banner slider css */
 .home_banner_slider {position: relative;}
-.banner_slide_item_inner {min-height: 590px;display: flex;flex-direction: column;justify-content: center;align-items: center;background-size: cover;background-repeat: no-repeat;background-position: center;position: relative;}
+.banner_slide_item_inner {min-height: 450px;display: flex;flex-direction: column;justify-content: center;align-items: center;background-size: cover;background-repeat: no-repeat;background-position: center;position: relative;}
 .banner_slide_item_inner:after {content: '';position: absolute;left: 0;top: 0;width: 100%;height: 100%;    background: rgb(0 0 0 / 30%);}
 .banner_slide_cont_inner {min-width: 700px;text-align: center;position: relative;z-index: 9;}
 .first_banner_slide_item_inner .banner_slide_cont_inner{max-width: 700px;}
@@ -955,13 +956,13 @@ h3.propertytxt {
 .search_wrapper {display: flex;align-items: flex-end;padding: 10px 30px;background: rgb(255 255 255 / 90%);position: absolute;width: 100%;bottom: 0px;justify-content: center;}
 .search_wrapper p {margin: 0px;font-family: 'Lato',sans-serif;font-weight: 300;}
 .search_wrapper form {position: relative;}
-.search_wrapper form input {background: transparent;border-width: 0px 0px 2px;margin-left: 10px;border-color: #000;padding: 0px 30px 0px 0px;}
+.search_wrapper form input {background: transparent;border-width: 0px 0px 2px;margin-left: 10px;border-color:transparent;padding: 0px 30px 0px 0px;min-width: 300px;}
 .search_wrapper form input:focus {outline: 0px;}
 .search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;}
 .search_wrapper form button:hover {color: #f8de7f;}
 .locWrapper {display:none;position: absolute;background: #fff;right: 0px;width: calc(100% - 10px);list-style: none;margin: 0px;box-shadow: 0px 0px 10px 0px #ccc;}
 .locWrapper ul {list-style: none;margin: 0px;padding: 0px;}
-.locWrapper ul li a {transition: 0.5s all; width: 100%;display: block;padding: 10px 15px;line-height: 1;text-decoration: none;color: #000;}
+.locWrapper ul li a {font-family: 'Gotham Light';transition: 0.5s all; width: 100%;display: block;padding: 10px 15px;line-height: 1;text-decoration: none;color: #000;}
 .locWrapper ul li a:hover {color: #f8de7f;}
 .search_wrapper form input:focus ~ .locWrapper {display: block;}
 
@@ -1056,6 +1057,11 @@ h3.propertytxt {
 .mini_col.grey_col .col_head {font-family: 'Lato';font-weight: 700;font-size: 21px;margin:0px;}
 .mini_col.grey_col .col_content {font-family: 'Lato';font-size: 16px;margin: 20px 0px 30px;}
 
+.header.sticky {position: sticky;top: 0px;z-index: 99;background: #fff;}
+.header.sticky .villazzo-logo-wrap .main-logo {width: 270px;padding-left: 50px}
+.header.sticky .see-more-text {bottom: 7px;}
+
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1118,7 +1124,6 @@ h3.propertytxt {
 @media only screen and (max-width: 1400px) {
   .bg-img {min-height: 700px;}
   .inquiry a.desktop-inquiry-call {font-size: 25px;margin-bottom: 0px;}
-  .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
   .toll-wrap a {font-size: 14px;}
 }
@@ -1132,6 +1137,7 @@ h3.propertytxt {
   .buy-search-box label, .form-control {font-size: 14px;}
   .inquiry-wrap {padding-top: 0px;}
   .sell-search-container.buy {width: 65%;}
+  .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
 }
 
 @media only screen and (max-width: 1200px) {

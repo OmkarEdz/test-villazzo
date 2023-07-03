@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
@@ -10,6 +10,17 @@ const Header = ({ navigation, global }) => {
   let navElements = navigation.attributes.Navigation
   let mainNavigation = []
   let menucount = 0
+  let timeout
+  let scroll = 0
+  useEffect(() => {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        document.getElementById('header').classList.add('sticky')
+      } else {
+        document.getElementById('header').classList.remove('sticky')
+      }
+    });
+  }, [])
   navElements.forEach((element, index) => {
     if (element.__component === "shared.header-navigation") {
       mainNavigation.push(element)
@@ -31,7 +42,7 @@ const Header = ({ navigation, global }) => {
 
   return (
     <>
-      <header className="header">
+      <header className="header" id="header">
           <div className="main-wrap">
             <div className="mobile-nav">
               <nav className="navbar navbar-expand-lg navbar-light hideOnDesk">

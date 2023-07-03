@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import ContactForm from "../components/contact-form"
 import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
@@ -39,13 +38,8 @@ const Home = ({
 
   function onhoverTabbng(event) {
     document.getElementById('tabList').classList = '';
-    document.getElementById('tabList').classList.add('showTab' + event.target.getAttribute("data-id"));
+    document.getElementById('tabList').classList.add('showTab' + event.currentTarget.getAttribute("data-id"));
   }
-
-  const addClassPopup = (e) => {
-    var popupId = document.getElementById("popover");
-    popupId.classList.add("show_popup");
-  };
 
   return (
     <>
@@ -171,7 +165,7 @@ const Home = ({
         </p>
         <h4 className="botMiniHead">{homepage.attributes.MoreVillaSection.EndHeading}</h4>
         <p className="bookMiniDesc">{homepage.attributes.MoreVillaSection.EndSubheading}</p>
-        <p className="contBtn inqury-btn"><a onClick={addClassPopup}>FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
       </div>
       {/* homepage MORE Villas section end here */}
 
@@ -254,7 +248,7 @@ const Home = ({
           <ul id="tabList" className="showTab0">
           {homepage.attributes.HomeTabs.map((item, index) => (
             <li className={`tabbing_item item${index}`} key={index} data-id={index}
-              onMouseEnter={(event)=>onhoverTabbng(event)}>
+              onClick={(event)=>onhoverTabbng(event)}>
               <div className="tabbing_item_icon">
                 <Image
                     loader={myLoader}
@@ -373,8 +367,6 @@ const Home = ({
       {/* homepage testimonial section end here */}
 
       <Footer footerProp={footerData} />
-
-      <ContactForm />
     </>
   )
 }
