@@ -422,13 +422,14 @@ img {
   color: #000;
     text-decoration: none;
     background-color: #f8de7f;
-    padding: 8px 50px;
-    font-size: 20px;
+    padding: 8px 15px;
+    font-size: 16px;
     transition-duration: .5s;
     font-family:'Gotham Medium',sans-serif;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 21px;
     border: 1px solid #f8de7f;
+    letter-spacing: -0.5px;
 }
 .inqury-btn a:hover {
   color: #000;background-color: #fff;
@@ -915,14 +916,13 @@ h3.propertytxt {
 .dropdownMenu p a > span img {width: 230px !important;}
 .dropdownMenu p a > span:first-child img {width: 221px !important;height: 221px !important;object-fit: cover;}
 .dropdownMenu.dropdownMenuNew p a:hover {filter: brightness(0.8);}
-.dropdownMenu.dropdownMenuSeeMore {border-radius: 0px;padding: 0px 10px;left: -70px;}
+.dropdownMenu.dropdownMenuSeeMore {border-radius: 0px;padding: 0px 10px;left: -60px;}
 .dropdownMenu.dropdownMenuSeeMore ul {padding: 0px 20px;margin:-5px 0px;text-align: center;list-style: none;}
 .dropdownMenu.dropdownMenuSeeMore ul li {margin: 25px 0px;}
 .dropdownMenu.dropdownMenuSeeMore ul li > a {text-decoration: none;color: #555;transition: 0.5s all;}
 .dropdownMenu.dropdownMenuSeeMore ul li > a span {font-weight: 600;color: #000;}
 .dropdownMenu.dropdownMenuSeeMore ul li > a:hover {color: #f8de7f;}
-.dropdownMenu.dropdownMenuSeeMore ul li .inqury-btn {margin: 0px 5px;}
-.dropdownMenu.dropdownMenuSeeMore ul li .inqury-btn a {padding: 12px 40px;}
+.dropdownMenu.dropdownMenuSeeMore ul li .inqury-btn {margin: 0px;justify-content: center;}
 
 
 /* loader css */
@@ -956,7 +956,7 @@ h3.propertytxt {
 .search_wrapper {display: flex;align-items: flex-end;padding: 10px 30px;background: rgb(255 255 255 / 90%);position: absolute;width: 100%;bottom: 0px;justify-content: center;}
 .search_wrapper p {margin: 0px;font-family: 'Lato',sans-serif;font-weight: 300;}
 .search_wrapper form {position: relative;}
-.search_wrapper form input {background: transparent;border-width: 0px 0px 2px;margin-left: 10px;border-color:transparent;padding: 0px 30px 0px 0px;min-width: 300px;}
+.search_wrapper form input {background: transparent;border-width: 0px 0px 2px;margin-left: 10px;border-color:transparent;padding: 0px 30px 0px 0px;min-width: 400px;}
 .search_wrapper form input:focus {outline: 0px;}
 .search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;}
 .search_wrapper form button:hover {color: #f8de7f;}
@@ -1016,7 +1016,7 @@ h3.propertytxt {
 .bookItemHead {font-size: 16px;font-weight: 600;font-family: 'Lato';min-height: 38px;margin-bottom: 10px;}
 .bookItemDesc {margin: 0px;font-family: 'Lato';font-size: 16px;letter-spacing: -0.5px;}
 .contBtn.inqury-btn {justify-content: space-around;}
-.contBtn.inqury-btn a {padding: 12px 30px;}
+/* .contBtn.inqury-btn a {padding: 12px 30px;} */
 .bottomLink {margin: 0px 6% 0px 0px;}
 .bottomLink a {text-decoration: none;color: #212529;font-family: 'Lato';}
 .bottomLink a:hover {text-decoration: underline !important;color: #f47421 !important;}
@@ -1101,6 +1101,15 @@ h3.propertytxt {
   .broker, .number, .email {font-size: 20px;}
 }
 
+@media (min-width: 1024px){
+  .inqury-btn a {padding: 8px 15px;min-width: 168px;max-width: 168px;text-align: center;}
+  .banner_slide_item_inner {min-height: calc(100vh - 160px);}
+  body .gallery_row_first .big_col .col_img img {min-height: 360px !important;max-height: 400px !important;}
+  .mini_col {max-height: 400px !important;}
+  .gallery_row_first .two_imgs .col_img {height: calc(50% - 6px);}
+  .gallery_row_first .mini_col .two_imgs {height: 100%;display: flex;flex-direction: column;align-items: stretch;}  
+}
+
 @media only screen and (max-width: 1750px) {
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 14px;}
   .navigate-sec1 {padding-bottom: 15px;}
@@ -1137,7 +1146,6 @@ h3.propertytxt {
   .buy-search-box label, .form-control {font-size: 14px;}
   .inquiry-wrap {padding-top: 0px;}
   .sell-search-container.buy {width: 65%;}
-  .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1170,7 +1178,7 @@ h3.propertytxt {
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;}
   .sell-btn a {padding: 10px 0;width: 140px;font-size: 14px;line-height: 14px;}
   .see-more-text p, .visit-text-wrap >p:first-child {font-size: 10px;}
-  .inqury-btn a {padding: 10px 40px;line-height: 14px;font-size: 14px;}
+  .inqury-btn a {line-height: 14px;font-size: 14px;}
   .see-more-text p.drop-down, .visit-text p.drop-down {font-size: 12px;}
   .toll-wrap {width: 90%;}
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 12px;}
@@ -1266,6 +1274,8 @@ h3.propertytxt {
   .bookItemImg span {height: 100% !important;}
   .bookItemImg span img {height: 100% !important;}
   .tabbing_wrapper {max-width: 100%;}
+
+  .search_wrapper form input {min-width: 250px;}
 }
 
 @media only screen and (max-width: 991px) {
