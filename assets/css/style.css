@@ -187,10 +187,10 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.bg-img .header, .footer-bg-color, .footer-bottom {
+/* .bg-img .header, .footer-bg-color, .footer-bottom {
   z-index: 99;
   position: relative;
-}
+} */
 .bg-img .buttons-wrap {
   z-index: 9;
   position: relative;
