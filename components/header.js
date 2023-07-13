@@ -184,13 +184,13 @@ const Header = ({ navigation, global }) => {
                             </li>
                           ))}
                           <li className="nav-item" >
-                            <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i class="fa fa-star"></i></a>
+                            <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a>
                           </li>
                         </ul>
                       </div>
                       <div className="footer-icons mobMenuSoc">
                         <p>CONNECT</p>
-                        <div class="icons-wrap"><a href=":mailto:villas@villazzo.com"><i class="fa-solid fa-envelope"></i></a><a href="https://www.facebook.com/Villazzo"><i class="fa-brands fa-facebook"></i></a><a href="https://www.pinterest.com/villazzo/"><i class="fa-brands fa-pinterest"></i></a><a href="https://www.instagram.com/villazzo/"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/user/VillazzoVideos"><i class="fa-brands fa-youtube"></i></a><a href="https://test.villazzo.com/"><i class="fa-brands fa-linkedin"></i></a><a href="https://twitter.com/villazzo"><i class="fa-brands fa-twitter"></i></a></div>
+                        <div className="icons-wrap"><a href=":mailto:villas@villazzo.com"><i className="fa-solid fa-envelope"></i></a><a href="https://www.facebook.com/Villazzo"><i className="fa-brands fa-facebook"></i></a><a href="https://www.pinterest.com/villazzo/"><i className="fa-brands fa-pinterest"></i></a><a href="https://www.instagram.com/villazzo/"><i className="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/user/VillazzoVideos"><i className="fa-brands fa-youtube"></i></a><a href="https://test.villazzo.com/"><i className="fa-brands fa-linkedin"></i></a><a href="https://twitter.com/villazzo"><i className="fa-brands fa-twitter"></i></a></div>
                       </div>
                     </div>
                   </div>
