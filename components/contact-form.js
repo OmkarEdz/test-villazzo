@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const ContactForm = ({
     
@@ -26,6 +28,8 @@ const ContactForm = ({
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [checkIn, setCheckIn] = useState();
+  const [checkOut, setCheckOut] = useState("");
   const [message, setMessage] = useState("");
 
   const onchange = event => {
@@ -69,6 +73,14 @@ const ContactForm = ({
       tempErrors["phone"] = true;
       isValid = false;
     }
+    if (checkIn.length <= 0) {
+      tempErrors["checkIn"] = true;
+      isValid = false;
+    }
+    if (checkOut.length <= 0) {
+      tempErrors["checkOut"] = true;
+      isValid = false;
+    }
     if (message.length <= 0) {
       tempErrors["message"] = true;
       isValid = false;
@@ -95,9 +107,31 @@ const ContactForm = ({
             email: email,
             phoneNo: phone,
             message: message,
+            checkInDate: checkIn,
+            checkOutDate: checkOut,
           }
         }
       );
+
+      const qs = require('qs');
+        axios.post('https://webdevfolio.com/TestVillazzomail/Villazzomail.php',  qs.stringify({
+            "firstName": fullname,
+            "lastName": lastName,
+            "email": email,
+            "phoneNo": phone,
+            "message": message,
+            "checkInDate": checkIn,
+            "checkOutDate": checkOut,
+
+        }))
+        .then((res) => {
+          console.log(`statusCode: ${res.statusCode}`)
+          console.log(res)
+          console.log(`statusCode: ${res.data}`)
+        })
+        .catch((error) => {
+          console.error(error)
+        })
       
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
@@ -106,6 +140,8 @@ const ContactForm = ({
       setlastName("");
       setEmail("");
       setPhone("");
+      setCheckIn("");
+      setCheckOut("");
       setMessage("");
 
       // setTimeout(() => {
@@ -121,6 +157,8 @@ const ContactForm = ({
       setlastName("");
       setEmail("");
       setPhone("");
+      setCheckIn("");
+      setCheckOut("");
       setMessage("");
   }
   return (
@@ -129,11 +167,10 @@ const ContactForm = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <a onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="Popup_wrap">
                       <form onSubmit={handleSubmit}>
                         <div className="contact-form">
-                          <h2>CONTACT US</h2>
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
@@ -169,21 +206,6 @@ const ContactForm = ({
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
-                                placeholder="EMAIL ADDRESS" 
-                                type="email"
-                                name="email"
-                                value={email}
-                                onChange={(e) => {
-                                  setEmail(e.target.value);
-                                }}
-                                className="input-name contact-lebel"
-                              />
-                              {errors?.email && (
-                                <p className="error_msg">Email cannot be empty.</p>
-                              )}
-                            </div>
-                            <div className="form-item">
-                              <input
                                 placeholder="PHONE" 
                                 type="tel"
                                 name="phone"
@@ -197,6 +219,35 @@ const ContactForm = ({
                                 <p className="error_msg">Phone number cannot be empty.</p>
                               )}
                             </div>
+                            <div className="form-item">
+                              <input
+                                placeholder="EMAIL ADDRESS" 
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => {
+                                  setEmail(e.target.value);
+                                }}
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.email && (
+                                <p className="error_msg">Email cannot be empty.</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="contact-form-label">
+                            <div className="form-item">
+                              <DatePicker selected={checkIn} onChange={(date) => setCheckIn(date)} className="input-name contact-lebel" placeholder="CHECK IN" />
+                              {errors?.checkIn && (
+                                <p className="error_msg">Check In cannot be empty.</p>
+                              )}
+                            </div>
+                            <div className="form-item">
+                              <DatePicker selected={checkOut} minDate={checkIn} onChange={(date) => setCheckOut(date)} className="input-name contact-lebel" placeholder="CHECK OUT" />
+                              {errors?.checkOut && (
+                                <p className="error_msg">Check Out cannot be empty.</p>
+                              )}
+                            </div>
                           </div>
                           <div className="contact-form-label">
                             <div className="form-item full-width">
@@ -206,13 +257,23 @@ const ContactForm = ({
                                 onChange={(e) => {
                                   setMessage(e.target.value);
                                 }}
-                                className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
+                                className="form-message contact-lebel" rows="4" cols="50" placeholder="COMMENTS">
                               </textarea>
                               {errors?.message && (
                                 <p className="error_msg">Message cannot be empty.</p>
                               )}
                             </div>
                           </div>
+                          {/* <div className="contact-form-label contact-form-label-footer">
+                            <div className="checkBoxWrap">
+                              <input type="checkbox" value="email-check" />
+                              Email me your monthly newsletter
+                            </div>
+                          </div>
+                          <div className="contact-form-label contact-form-label-footer">
+                            <p>Confirm that you are not a Robot:</p>
+                            <input type="text" className="" placeholder="What is 2+2 ?" />
+                          </div> */}
                           <div className="submit_btn_wrap">
                             <button type="submit" >Submit</button>
                           </div>
@@ -234,7 +295,7 @@ const ContactForm = ({
                   </div>
               </div>
             </div>
-          </div>
+        </div>
       </>
   )
 }

@@ -7,6 +7,7 @@ import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 import axios from 'axios'
 import Slider from 'react-slick';
+import ContactForm from "../components/contact-form"
 
 var HomeSlider = {
   infinite: true,
@@ -36,6 +37,11 @@ const Home = ({
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
+  // const navRef = document.getElementById("popover");
+  const onAddClick = (e) => {
+    document.getElementById("popover").classList.add("show_popup");
+  };
+
   function onhoverTabbng(event) {
     document.getElementById('tabList').classList = '';
     document.getElementById('tabList').classList.add('showTab' + event.currentTarget.getAttribute("data-id"));
@@ -63,7 +69,7 @@ const Home = ({
                 <div className="banner_slide_cont_inner">
                   <h1 className="banner_slide_head">{homepage.attributes.HomeSlider.FirstSlideHead}</h1>
                   <p className="banner_slide_cont">{homepage.attributes.HomeSlider.FirstSlideContent}</p>
-                  <p className="contBtn inqury-btn"><a href={homepage.attributes.HomeSlider.FirstSlideLink}>FIND OUT MORE</a></p>
+                  <p className="contBtn inqury-btn"><a href="javascript:;" onClick={onAddClick}>FIND OUT MORE</a></p>
                 </div>
             </div>
           </div>
@@ -165,7 +171,7 @@ const Home = ({
         </p>
         <h4 className="botMiniHead">{homepage.attributes.MoreVillaSection.EndHeading}</h4>
         <p className="bookMiniDesc">{homepage.attributes.MoreVillaSection.EndSubheading}</p>
-        <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="javascript:;" onClick={onAddClick}>FIND OUT MORE</a></p>
       </div>
       {/* homepage MORE Villas section end here */}
 
@@ -223,7 +229,7 @@ const Home = ({
           <div className="mini_col grey_col">
             <h3 className="col_head">{homepage.attributes.HomeGallery.SecRowHead}</h3>
             <p className="col_content">{homepage.attributes.HomeGallery.SecRowContent}</p>
-            <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
+            <p className="contBtn inqury-btn"><a href="https://test.villazzo.com/about-luxury-villa-rentals/5-star-villahotel-service">FIND OUT MORE</a></p>
           </div>
           <div className="mini_col">
             <p className="col_img">
@@ -270,7 +276,7 @@ const Home = ({
           ))}
           </div>
         </div>
-        <p className="contBtn inqury-btn"><a href={homepage.attributes.HomeTabbing.ButtonLink}>FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="javascript:;" onClick={onAddClick}>FIND OUT MORE</a></p>
       </div>
       {/* homepage tabbing section start here */}
 
@@ -280,16 +286,16 @@ const Home = ({
         <h2 className="bookHead noMar">{homepage.attributes.Inspiration.Heading}</h2>
         <p className="bookDesc">{homepage.attributes.Inspiration.content}</p>
         <div className="insp_box_wrapper">
-          <a className="insp_box_item big_width" href="https://test.villazzo.com/blog/2021/06/the-best-cities-to-meet-people/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage1})`}}>
+          <a className="insp_box_item big_width" href="https://www.villazzo.com/blog/category/miami/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage1})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent1}</span>
           </a>
-          <a className="insp_box_item" href="https://test.villazzo.com/blog/2021/06/where-to-find-the-most-beautiful-castles-in-europe/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage2})`}}>
+          <a className="insp_box_item" href="https://www.villazzo.com/blog/category/miami-beach-luxury-travel/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage2})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent2}</span>
           </a>
-          <a className="insp_box_item" href="https://test.villazzo.com/blog/2021/05/five-places-to-discover-greek-architecture/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage3})`}}>
+          <a className="insp_box_item" href="https://www.villazzo.com/blog/category/travel/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage3})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent3}</span>
           </a>
-          <a className="insp_box_item big_width" href="https://test.villazzo.com/blog/2021/05/a-guide-to-cuban-culture-in-miami/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage4})`}}>
+          <a className="insp_box_item big_width" href="https://www.villazzo.com/blog/category/property-management/" style={{backgroundImage:`url(${process.env.NEXT_PUBLIC_STRAPI_API_URL}${homepage.attributes.Inspiration.BoxImage4})`}}>
             <span className="insp_box_cont">{homepage.attributes.Inspiration.BoxContent4}</span>
           </a>
         </div>
@@ -337,7 +343,7 @@ const Home = ({
             <p className="bookItemDesc">{homepage.attributes.bookVillazzoSection.BookItemContent3}</p>
           </div>
         </div>
-        <p className="contBtn inqury-btn"><a href="#">FIND OUT MORE</a></p>
+        <p className="contBtn inqury-btn"><a href="javascript:;" onClick={onAddClick}>FIND OUT MORE</a></p>
       </div>
       {/* homepage BOOK WITH VILLAZZO section end here */}
 
@@ -365,7 +371,7 @@ const Home = ({
         </div>
       </div>
       {/* homepage testimonial section end here */}
-
+      <ContactForm />
       <Footer footerProp={footerData} />
     </>
   )

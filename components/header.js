@@ -38,7 +38,19 @@ const Header = ({ navigation, global }) => {
   const [toggleMenuClass, toggleMenu] = useState(false)
   const [subMenuClass, subMenuToggleMenu] = useState(false)
   
-  const navRef = React.useRef(null);
+  const onAddClick = (e) => {
+    document.getElementById("popover").classList.add("show_popup");
+  };
+
+  const openMobMenu = (e) => {
+    document.getElementById("mobMenu").classList.add("collapse");
+    document.getElementsByTagName("html")[0].classList.add("hideScroll");
+  };
+
+  const closeMobMenu = (e) => {
+    document.getElementById("mobMenu").classList.remove("collapse");
+    document.getElementsByTagName("html")[0].classList.remove("hideScroll");
+  };
 
   return (
     <>
@@ -50,12 +62,12 @@ const Header = ({ navigation, global }) => {
                   <button
                     className="navbar-toggler"
                     type="button"
-                    onClick={() => toggleMenu((toggleMenuClass = !toggleMenuClass))}
+                    onClick={openMobMenu}
                   >
                     <i className="fa fa-bars" aria-hidden="true"></i>
                   </button>
                   <div
-                    className={`navbar-collapse ${ toggleMenuClass ? "" : "collapse"}`}
+                    className="navbar-collapse"
                     id="navbarNavDropdown"
                   >
                     <ul className="navbar-nav">
@@ -79,6 +91,108 @@ const Header = ({ navigation, global }) => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                  <div className={`mob-menu ${ toggleMenuClass ? "collapse" : ""}`} id="mobMenu">
+                    <a onClick={closeMobMenu} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <div className="mob-menu-inner">
+                      <div className="main-logo">
+                        <Link href="https://www.villazzo.com/" passHref><Image
+                          loader={myLoader}
+                          src={getStrapiMedia(global.attributes.siteLogo)}
+                          alt="Image"
+                          layout="fill"
+                        /></Link>
+                      </div>
+                      <div className="underLogoLink">
+                        <div className="visit-text-wrap">
+                          <p>Visit Our Sites</p>
+                          <p className="drop-down mb-drop">
+                            <a href="#">
+                              <i className="fa-solid fa-caret-down"></i>
+                            </a>
+                          </p>
+                          <div className="dropdownMenu dropdownMenuNew">
+                            {navigation.attributes.OurSitesHeader.map((Element, index) => (
+                              <p key={index}>
+                                <a href={Element.SiteLink}>
+                                  <Image
+                                    loader={myLoader}
+                                    src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${Element.SiteImageURL}`}
+                                    key={`featuredImage${index}`}
+                                    alt="Our Site"
+                                    layout="fill"
+                                  />
+                                </a>
+                              </p>
+                            ))}
+                          </div>
+                        </div>|
+                        <div className="see-more-text-mob">
+                            <div className="see-more-text-wrap">
+                              <p>SEE MORE OPTIONS</p>
+                              <p className="drop-down">
+                                <a href="#">
+                                  <i className="fa-solid fa-caret-down"></i>
+                                </a>
+                              </p>
+                              <div className="dropdownMenu dropdownMenuSeeMore">
+                                <ul>
+                                  <li>
+                                    <a href="tel:+1(877)8455299"><span>TOLL FREE:</span><br/>1-877-VILLAZZO</a>
+                                  </li>
+                                  <li>
+                                    <a href="tel:+1-305-777-0146"><span>MIAMI OFFICE:</span><br/>+1 (305) 777-0146</a>
+                                  </li>
+                                  <li>
+                                    <a href="tel:+33(4)94493254"><span>SAINT-TROPEZ OFFICE:</span><br/>+33 (4) 94 49 32 54</a>
+                                  </li>
+                                  <li>
+                                    <div className="inqury-btn">
+                                      <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">CONTACT US</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div className="inquiry-wrap">
+                        <div className="inquiry">
+                          <a href="tel:+1(305)777 0146" className="inquiry-call">+1 (877) VILLAZZO</a>|
+                          <a href="mailto:villas@villazzo.com" className="inquiry-call">VILLAS@VILLAZZO.COM </a>
+                        </div>
+                      </div>
+                      <div className="mob_main-menu">
+                        <ul className="navbar-nav">
+                          {mainNavigation.map((menu, index) => (
+                            <li className="nav-item" key={`nav-menu-mobile${index}`}>
+                              <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
+                                {menu.Label}
+                                {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
+                              </a>
+                              {menu.submenu.length ? (
+                                <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`} key={`nav-submenu-mobile${index}`}>
+                                  {menu.submenu.map((submenu) => (
+                                    <li key={`nav-li-mobile${index}sub${submenu.Label}`}>
+                                      <a className="dropdown-item" href={submenu.URL} key={`nav-menu-item${index}dd${submenu.Label}`}>
+                                        {submenu.Label}
+                                      </a>
+                                    </li>
+                                  ))} 
+                                </ul>
+                              ) : ("")}
+                            </li>
+                          ))}
+                          <li className="nav-item" >
+                            <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i class="fa fa-star"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="footer-icons mobMenuSoc">
+                        <p>CONNECT</p>
+                        <div class="icons-wrap"><a href=":mailto:villas@villazzo.com"><i class="fa-solid fa-envelope"></i></a><a href="https://www.facebook.com/Villazzo"><i class="fa-brands fa-facebook"></i></a><a href="https://www.pinterest.com/villazzo/"><i class="fa-brands fa-pinterest"></i></a><a href="https://www.instagram.com/villazzo/"><i class="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/user/VillazzoVideos"><i class="fa-brands fa-youtube"></i></a><a href="https://test.villazzo.com/"><i class="fa-brands fa-linkedin"></i></a><a href="https://twitter.com/villazzo"><i class="fa-brands fa-twitter"></i></a></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </nav>
@@ -159,7 +273,7 @@ const Header = ({ navigation, global }) => {
               </div>
             </div>
             <div className="inqury-btn">
-              <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">INQUIRE</a>
+              <a href="javascript:;" onClick={onAddClick}>INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">

@@ -7,10 +7,10 @@ const Footer = ({ footerProp }) => {
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
-  const navRef = React.useRef(null);
-  const onAddClick = (e) => {
-    navRef.current.classList.add("show_popup");
-  };
+  // const navRef = React.useRef(null);
+  // const onAddClick = (e) => {
+  //   navRef.current.classList.add("show_popup");
+  // };
 
   const onRemoveClick = (e) => {
     navRef.current.classList.remove("show_popup");

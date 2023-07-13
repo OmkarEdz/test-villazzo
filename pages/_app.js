@@ -16,12 +16,12 @@ const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps  
   return (
     <>
-      <Head>
+      {/* <Head>
         <link
           rel="shortcut icon"
           href={getStrapiMedia(global.attributes.favicon)}
         />
-      </Head>
+      </Head> */}
       <GlobalContext.Provider value={global.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
