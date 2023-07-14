@@ -1067,8 +1067,8 @@ h3.propertytxt {
 .header.sticky .see-more-text {bottom: 7px;}
 
 /* mobile menu css */
-.mob-menu {background: rgb(0 0 0 / 60%);visibility: hidden;position: fixed;width: 100%;height: 100%;z-index: 9;top: 0px;left: 0px;transition: 0.5s all;display: block !important;opacity: 0;-webkit-transition: opacity 1s ease-in-out;-moz-transition: opacity 1s ease-in-out;transition: opacity 1s ease-in-out;}
-.mob-menu.collapse {opacity: 1;visibility: visible;}
+.mob-menu {background: rgb(0 0 0 / 60%);visibility: hidden;position: fixed;width: 100%;height: 100%;z-index: 9;top: 0px;left: 0px;transition: 0.5s all;display: none;opacity: 0;-webkit-transition: opacity 1s ease-in-out;-moz-transition: opacity 1s ease-in-out;transition: opacity 1s ease-in-out;}
+.mob-menu.collapse {opacity: 1;visibility: visible;display: block !important;}
 .mob-menu-inner {max-height: 100%;background: #fff;height: 100%;width:0;transition: 0.5s all;padding: 20px;}
 .mob-menu.collapse .mob-menu-inner {width: 90%;}
 .mob-menu .model_close {right: calc(5% - 8px);top: 5px;color: #fff;}
@@ -1090,7 +1090,8 @@ h3.propertytxt {
 .footer-icons.mobMenuSoc {flex-direction: column;}
 .footer-icons.mobMenuSoc .icons-wrap {margin-left: 0px;margin-top: 10px;}
 .footer-icons.mobMenuSoc .icons-wrap a {font-size: 18px;}
-
+/* .navbar-light .mob_main-menu .navbar-nav .nav-link .arrow {transition: 0.5s all;}
+.navbar-light .mob_main-menu .navbar-nav .nav-link.active .arrow {transform: rotate(180deg);} */
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -1687,6 +1688,12 @@ h3.propertytxt {
   .search_wrapper form input {min-width: 100%;margin-left: 0px;}
   .home_banner_slider .slick-arrow {transform: translateY(-52px);}
   .first_banner_slide_item_inner .banner_slide_cont_inner, .banner_slide_cont_inner {padding-bottom: 77px;}
+  .mob-menu .mob-menu-inner .dropdownMenu.dropdownMenuNew {max-width: 150px;}
+  .dropdownMenu.dropdownMenuSeeMore ul li > a {font-size: 12px;}
+  .dropdownMenu.dropdownMenuSeeMore ul li {margin: 15px 0px;}
+  .dropdownMenu.dropdownMenuSeeMore {width: 200px;left:-50px;}
+  .dropdownMenu.dropdownMenuSeeMore ul {padding:0px;}
+  .middleImg span, .middleImg span img {width: 100% !important;}
 }
 
 @media only screen and (max-width: 430px) {

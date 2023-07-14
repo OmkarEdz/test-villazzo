@@ -166,7 +166,7 @@ const Header = ({ navigation, global }) => {
                         <ul className="navbar-nav">
                           {mainNavigation.map((menu, index) => (
                             <li className="nav-item" key={`nav-menu-mobile${index}`}>
-                              <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${menu.showIcon === "Yes" ? "showIcon" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
+                              <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${ subMenuClass ? "active" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
                                 {menu.Label}
                                 {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
                               </a>
@@ -185,6 +185,20 @@ const Header = ({ navigation, global }) => {
                           ))}
                           <li className="nav-item" >
                             <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a>
+                          </li>
+                          <li className="nav-item">
+                          <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>GUIDES<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            </a>
+                            <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
+                              <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
+                            </ul>
+                          </li>
+                          <li className="nav-item">
+                            <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            </a>
+                            <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
+                              <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
+                            </ul>
                           </li>
                         </ul>
                       </div>
