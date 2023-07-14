@@ -624,7 +624,7 @@ color:#212529;
   overflow: hidden;
 }
 .footer-img .featured-img img {
-  height:100% !important;
+  min-height:100% !important;
   min-width: 100% !important;
   width:auto !important;
   left:0 !important;
@@ -964,6 +964,7 @@ h3.propertytxt {
 .search_wrapper form input:focus {outline: 0px;}
 .search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;}
 .search_wrapper form button:hover {color: #f8de7f;}
+.search_wrapper form button i {color: #000;}
 .locWrapper {display:none;position: absolute;background: #fff;right: 0px;width: calc(100% - 10px);list-style: none;margin: 0px;box-shadow: 0px 0px 10px 0px #ccc;}
 .locWrapper ul {list-style: none;margin: 0px;padding: 0px;}
 .locWrapper ul li a {font-family: 'Gotham Light';transition: 0.5s all; width: 100%;display: block;padding: 10px 15px;line-height: 1;text-decoration: none;color: #000;}
@@ -1113,7 +1114,7 @@ h3.propertytxt {
 }
 
 @media (min-width: 1750px){
-  body .footer-images, body .footer-img span, body .footer-img .featured-img img {height: 100% !important;}
+  body .footer-images, body .footer-img span, body .footer-img .featured-img img {min-height: 100% !important;}
   /* .navbar-expand-lg .navbar-nav li.nav-item:nth-child(2) {margin-right: 45px;}
   .navbar-expand-lg .navbar-nav li.nav-item:nth-child(3) {margin-right: 100px;}
   .navbar-expand-lg .navbar-nav li.nav-item:last-child {width: max-content;} */
@@ -1408,8 +1409,9 @@ h3.propertytxt {
     padding-left: 0px;
   }
   .navbar-light .navbar-nav .nav-link {
-    border-bottom: 1px solid #c9b363;
+    border-bottom: 1px solid #ccc;
     text-align: left !important;
+    padding: 14px 15px!important;
   }
   .mb-drop a {
     color: #fff !important;
@@ -1549,7 +1551,7 @@ h3.propertytxt {
     height: 100%;
   }
   .footer-img .featured-img img {
-    height: 100% !important;
+    min-height: 100% !important;
   }
   .footer-img {
     margin-top: 10px;
@@ -1598,7 +1600,7 @@ h3.propertytxt {
     margin-bottom: 20px;
   }
   .year {
-    width: 35%;
+    width: 100%;
     padding: 5px 10px;
   }
   .year a {
@@ -1680,7 +1682,11 @@ h3.propertytxt {
   .insp_box_item {width: 100%;min-height: 250px;margin: 4px 0px;}
   .insp_box_item.big_width {width: 100%;}
   .search_wrapper {padding: 10px 20px;flex-wrap: wrap;}
-  .search_wrapper p {margin: 0px 0px 10px;}
+  .search_wrapper p {margin: 0px 0px 10px;font-size: 14px;}
+  .search_wrapper form {width: 100%;}
+  .search_wrapper form input {min-width: 100%;margin-left: 0px;}
+  .home_banner_slider .slick-arrow {transform: translateY(-52px);}
+  .first_banner_slide_item_inner .banner_slide_cont_inner, .banner_slide_cont_inner {padding-bottom: 77px;}
 }
 
 @media only screen and (max-width: 430px) {
