@@ -95,116 +95,125 @@ const Header = ({ navigation, global }) => {
                   <div className={`mob-menu ${ toggleMenuClass ? "collapse" : ""}`} id="mobMenu">
                     <a onClick={closeMobMenu} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="mob-menu-inner">
-                      <div className="main-logo">
-                        <Link href="https://www.villazzo.com/" passHref><Image
-                          loader={myLoader}
-                          src={getStrapiMedia(global.attributes.siteLogo)}
-                          alt="Image"
-                          layout="fill"
-                        /></Link>
-                      </div>
-                      <div className="underLogoLink">
-                        <div className="visit-text-wrap">
-                          <p>Visit Our Sites</p>
-                          <p className="drop-down mb-drop">
-                            <a href="#">
-                              <i className="fa-solid fa-caret-down"></i>
-                            </a>
-                          </p>
-                          <div className="dropdownMenu dropdownMenuNew">
-                            {navigation.attributes.OurSitesHeader.map((Element, index) => (
-                              <p key={index}>
-                                <a href={Element.SiteLink}>
-                                  <Image
-                                    loader={myLoader}
-                                    src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${Element.SiteImageURL}`}
-                                    key={`featuredImage${index}`}
-                                    alt="Our Site"
-                                    layout="fill"
-                                  />
-                                </a>
-                              </p>
-                            ))}
-                          </div>
-                        </div>|
-                        <div className="see-more-text-mob">
-                            <div className="see-more-text-wrap">
-                              <p>SEE MORE OPTIONS</p>
-                              <p className="drop-down">
-                                <a href="#">
-                                  <i className="fa-solid fa-caret-down"></i>
-                                </a>
-                              </p>
-                              <div className="dropdownMenu dropdownMenuSeeMore">
-                                <ul>
-                                  <li>
-                                    <a href="tel:+1(877)8455299"><span>TOLL FREE:</span><br/>1-877-VILLAZZO</a>
-                                  </li>
-                                  <li>
-                                    <a href="tel:+1-305-777-0146"><span>MIAMI OFFICE:</span><br/>+1 (305) 777-0146</a>
-                                  </li>
-                                  <li>
-                                    <a href="tel:+33(4)94493254"><span>SAINT-TROPEZ OFFICE:</span><br/>+33 (4) 94 49 32 54</a>
-                                  </li>
-                                  <li>
-                                    <div className="inqury-btn">
-                                      <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">CONTACT US</a>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
+                      <div className="mobMenuInner">
+                        <div className="main-logo">
+                          <Link href="https://www.villazzo.com/" passHref><Image
+                            loader={myLoader}
+                            src={getStrapiMedia(global.attributes.siteLogo)}
+                            alt="Image"
+                            layout="fill"
+                          /></Link>
                         </div>
-                      </div>
-                      <div className="inquiry-wrap">
-                        <div className="inquiry">
-                          <a href="tel:+1(305)777 0146" className="inquiry-call">+1 (877) VILLAZZO</a>|
-                          <a href="mailto:villas@villazzo.com" className="inquiry-call">VILLAS@VILLAZZO.COM </a>
-                        </div>
-                      </div>
-                      <div className="mob_main-menu">
-                        <ul className="navbar-nav">
-                          {mainNavigation.map((menu, index) => (
-                            <li className="nav-item" key={`nav-menu-mobile${index}`}>
-                              <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${ subMenuClass ? "active" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
-                                {menu.Label}
-                                {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
+                        <div className="underLogoLink">
+                          <div className="visit-text-wrap">
+                            <p>Visit Our Sites</p>
+                            <p className="drop-down mb-drop">
+                              <a href="#">
+                                <i className="fa-solid fa-caret-down"></i>
                               </a>
-                              {menu.submenu.length ? (
-                                <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`} key={`nav-submenu-mobile${index}`}>
-                                  {menu.submenu.map((submenu) => (
-                                    <li key={`nav-li-mobile${index}sub${submenu.Label}`}>
-                                      <a className="dropdown-item" href={submenu.URL} key={`nav-menu-item${index}dd${submenu.Label}`}>
-                                        {submenu.Label}
-                                      </a>
+                            </p>
+                            <div className="dropdownMenu dropdownMenuNew">
+                              {navigation.attributes.OurSitesHeader.map((Element, index) => (
+                                <p key={index}>
+                                  <a href={Element.SiteLink}>
+                                    <Image
+                                      loader={myLoader}
+                                      src= {`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${Element.SiteImageURL}`}
+                                      key={`featuredImage${index}`}
+                                      alt="Our Site"
+                                      layout="fill"
+                                    />
+                                  </a>
+                                </p>
+                              ))}
+                            </div>
+                          </div>|
+                          <div className="see-more-text-mob">
+                              <div className="see-more-text-wrap">
+                                <p>SEE MORE OPTIONS</p>
+                                <p className="drop-down">
+                                  <a href="#">
+                                    <i className="fa-solid fa-caret-down"></i>
+                                  </a>
+                                </p>
+                                <div className="dropdownMenu dropdownMenuSeeMore">
+                                  <ul>
+                                    <li>
+                                      <a href="tel:+1(877)8455299"><span>TOLL FREE:</span><br/>1-877-VILLAZZO</a>
                                     </li>
-                                  ))} 
-                                </ul>
-                              ) : ("")}
+                                    <li>
+                                      <a href="tel:+1-305-777-0146"><span>MIAMI OFFICE:</span><br/>+1 (305) 777-0146</a>
+                                    </li>
+                                    <li>
+                                      <a href="tel:+33(4)94493254"><span>SAINT-TROPEZ OFFICE:</span><br/>+33 (4) 94 49 32 54</a>
+                                    </li>
+                                    <li>
+                                      <div className="inqury-btn">
+                                        <a href="https://test.villazzo.com/about-luxury-villa-rentals/contact">CONTACT US</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div className="inquiry-wrap">
+                          <div className="inquiry">
+                            <a href="tel:+1(305)777 0146" className="inquiry-call">+1 (877) VILLAZZO</a>|
+                            <a href="mailto:villas@villazzo.com" className="inquiry-call">VILLAS@VILLAZZO.COM </a>
+                          </div>
+                        </div>
+                        <div className="mob_main-menu">
+                          <ul className="navbar-nav">
+                            {mainNavigation.map((menu, index) => (
+                              <li className="nav-item" key={`nav-menu-mobile${index}`}>
+                                <a href={menu.URL} key={`nav-link-mobile${index}`} className={`nav-link ${ subMenuClass ? "active" : ""}`} onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))}>
+                                  {menu.Label}
+                                  {menu.submenu.length ? <span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span> : ""}
+                                </a>
+                                {menu.submenu.length ? (
+                                  <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`} key={`nav-submenu-mobile${index}`}>
+                                    {menu.submenu.map((submenu) => (
+                                      <li key={`nav-li-mobile${index}sub${submenu.Label}`}>
+                                        <a className="dropdown-item" href={submenu.URL} key={`nav-menu-item${index}dd${submenu.Label}`}>
+                                          {submenu.Label}
+                                        </a>
+                                      </li>
+                                    ))} 
+                                  </ul>
+                                ) : ("")}
+                              </li>
+                            ))}
+                            <li className="nav-item" >
+                              <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a>
                             </li>
-                          ))}
-                          <li className="nav-item" >
-                            <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a>
-                          </li>
-                          <li className="nav-item">
-                          <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>GUIDES<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            </a>
-                            <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
-                              <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
-                            </ul>
-                          </li>
-                          <li className="nav-item">
-                            <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            </a>
-                            <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
-                              <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="footer-icons mobMenuSoc">
-                        <p>CONNECT</p>
-                        <div className="icons-wrap"><a href=":mailto:villas@villazzo.com"><i className="fa-solid fa-envelope"></i></a><a href="https://www.facebook.com/Villazzo"><i className="fa-brands fa-facebook"></i></a><a href="https://www.pinterest.com/villazzo/"><i className="fa-brands fa-pinterest"></i></a><a href="https://www.instagram.com/villazzo/"><i className="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/user/VillazzoVideos"><i className="fa-brands fa-youtube"></i></a><a href="https://test.villazzo.com/"><i className="fa-brands fa-linkedin"></i></a><a href="https://twitter.com/villazzo"><i className="fa-brands fa-twitter"></i></a></div>
+                            <li className="nav-item">
+                            <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>GUIDES<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                              </a>
+                              <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
+                                <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
+                              </ul>
+                            </li>
+                            <li className="nav-item">
+                              <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                              </a>
+                              <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
+                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDER'S VISION</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/faq">FAQ</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/super-bowl-2021">SPECIAL OFFERS</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/testimonials">TESTIMONIALS</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/yachts">YACHTS</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/press">PRESS</a></li>
+                                <li class="text-left"><a className="dropdown-item" href="/blog">BLOG</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="footer-icons mobMenuSoc">
+                          <p>CONNECT</p>
+                          <div className="icons-wrap"><a href=":mailto:villas@villazzo.com"><i className="fa-solid fa-envelope"></i></a><a href="https://www.facebook.com/Villazzo"><i className="fa-brands fa-facebook"></i></a><a href="https://www.pinterest.com/villazzo/"><i className="fa-brands fa-pinterest"></i></a><a href="https://www.instagram.com/villazzo/"><i className="fa-brands fa-instagram"></i></a><a href="https://www.youtube.com/user/VillazzoVideos"><i className="fa-brands fa-youtube"></i></a><a href="https://test.villazzo.com/"><i className="fa-brands fa-linkedin"></i></a><a href="https://twitter.com/villazzo"><i className="fa-brands fa-twitter"></i></a></div>
+                        </div>
                       </div>
                     </div>
                   </div>
