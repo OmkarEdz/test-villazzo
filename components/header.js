@@ -198,14 +198,14 @@ const Header = ({ navigation, global }) => {
                               <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
                               </a>
                               <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
-                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDER'S VISION</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/faq">FAQ</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/super-bowl-2021">SPECIAL OFFERS</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/testimonials">TESTIMONIALS</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/yachts">YACHTS</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/press">PRESS</a></li>
-                                <li class="text-left"><a className="dropdown-item" href="/blog">BLOG</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDER'S VISION</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/faq">FAQ</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/super-bowl-2021">SPECIAL OFFERS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/testimonials">TESTIMONIALS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/yachts">YACHTS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/press">PRESS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/blog">BLOG</a></li>
                               </ul>
                             </li>
                           </ul>
