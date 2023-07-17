@@ -198,7 +198,7 @@ const Header = ({ navigation, global }) => {
                               <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
                               </a>
                               <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDER'S VISION</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDERS VISION</a></li>
                                 <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/faq">FAQ</a></li>
                                 <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
                                 <li className="text-left"><a className="dropdown-item" href="/super-bowl-2021">SPECIAL OFFERS</a></li>
