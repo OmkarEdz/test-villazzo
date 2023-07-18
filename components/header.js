@@ -37,6 +37,12 @@ const Header = ({ navigation, global }) => {
   })
   const [toggleMenuClass, toggleMenu] = useState(false)
   const [subMenuClass, subMenuToggleMenu] = useState(false)
+
+  const [toggleMenuClassTwo, toggleMenuTwo] = useState(false)
+  const [subMenuClassTwo, subMenuToggleMenuTwo] = useState(false)
+
+  const [toggleMenuClassThree, toggleMenuThree] = useState(false)
+  const [subMenuClassThree, subMenuToggleMenuThree] = useState(false)
   
   const onAddClick = (e) => {
     document.getElementById("popover").classList.add("show_popup");
@@ -97,7 +103,7 @@ const Header = ({ navigation, global }) => {
                     <div className="mob-menu-inner">
                       <div className="mobMenuInner">
                         <div className="main-logo">
-                          <Link href="https://www.villazzo.com/" passHref><Image
+                          <Link href="/" passHref><Image
                             loader={myLoader}
                             src={getStrapiMedia(global.attributes.siteLogo)}
                             alt="Image"
@@ -188,24 +194,24 @@ const Header = ({ navigation, global }) => {
                               <a className="nav-link" href="https://test.villazzo.com/favourites">FAVORITES <i className="fa fa-star"></i></a>
                             </li>
                             <li className="nav-item">
-                            <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>GUIDES<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <a onClick={() => subMenuToggleMenuTwo((subMenuClassTwo = !subMenuClassTwo))} className={`nav-link ${ subMenuClassTwo ? "active" : ""}`}>GUIDES<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
                               </a>
-                              <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
+                              <ul className={`dropdown-menu ${ subMenuClassTwo ? "active" : ""}`}>
                                 <li><a className="dropdown-item" href="https://test.villazzo.com/luxury-rental-property-vacation-destinations">DESTINATIONS MAP</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/aspen">ASPEN</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/miami">MIAMI</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/saint-tropez">SAINT-TROPEZ</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/mykonos">MYKONOS</a></li><li><a className="dropdown-item" href="https://test.villazzo.com/rental-villas/ibiza">IBIZA</a></li><li><a className="dropdown-item" href="https://www.global-luxury-villas.com/">VIEW MORE DESTINATIONS</a></li>
                               </ul>
                             </li>
                             <li className="nav-item">
-                              <a onClick={() => subMenuToggleMenu((subMenuClass = !subMenuClass))} className={`nav-link ${ subMenuClass ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
+                              <a onClick={() => subMenuToggleMenuThree((subMenuClassThree = !subMenuClassThree))} className={`nav-link ${ subMenuClassThree ? "active" : ""}`}>INFORMATION<span className="arrow"><i className="fa fa-chevron-down" aria-hidden="true"></i></span>
                               </a>
-                              <ul className={`dropdown-menu ${ subMenuClass ? "active" : ""}`}>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/founders-vision">FOUNDERS VISION</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/faq">FAQ</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/super-bowl-2021">SPECIAL OFFERS</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/testimonials">TESTIMONIALS</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/yachts">YACHTS</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/about-luxury-villa-rentals/press">PRESS</a></li>
-                                <li className="text-left"><a className="dropdown-item" href="/blog">BLOG</a></li>
+                              <ul className={`dropdown-menu ${ subMenuClassThree ? "active" : ""}`}>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/about-luxury-villa-rentals/founders-vision">FOUNDER S VISION</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/about-luxury-villa-rentals/faq">FAQ</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/about-luxury-villa-rentals/how-to-book">HOW TO BOOK</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/super-bowl-2021">SPECIAL OFFERS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/about-luxury-villa-rentals/testimonials">TESTIMONIALS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/yachts">YACHTS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/about-luxury-villa-rentals/press">PRESS</a></li>
+                                <li className="text-left"><a className="dropdown-item" href="https://test.villazzo.com/blog">BLOG</a></li>
                               </ul>
                             </li>
                           </ul>
@@ -223,7 +229,7 @@ const Header = ({ navigation, global }) => {
             <div className="logo-wrap">
               <div className="villazzo-logo-wrap">
                 <div className="main-logo">
-                  <Link href="https://www.villazzo.com/" passHref><Image
+                  <Link href="/" passHref><Image
                     loader={myLoader}
                     src={getStrapiMedia(global.attributes.siteLogo)}
                     alt="Image"
@@ -354,7 +360,7 @@ const Header = ({ navigation, global }) => {
               </div>
             </div>
           </nav>
-        </header>
+      </header>
     </>
   )
 }

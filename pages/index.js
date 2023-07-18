@@ -144,11 +144,11 @@ const Home = ({
             <input type="text" />
             <div className="locWrapper">
               <ul>
-                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/aspen`}>Aspen</a></li>
-                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/miami`}>Miami</a></li>
-                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/saint-tropez`}>Saint-Tropez</a></li>
-                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/mykonos`}>Mykonos</a></li>
-                <li><a href={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}` + `/ibiza`}>Ibiza</a></li>
+                <li><a href="https://test.villazzo.com/rental-villas/aspen">Aspen</a></li>
+                <li><a href="https://test.villazzo.com/rental-villas/miami">Miami</a></li>
+                <li><a href="https://test.villazzo.com/rental-villas/saint-tropez">Saint-Tropez</a></li>
+                <li><a href="https://test.villazzo.com/rental-villas/mykonos">Mykonos</a></li>
+                <li><a href="https://test.villazzo.com/rental-villas/ibiza">Ibiza</a></li>
               </ul>
             </div>
             <button type="submit"><i className="fas fa-search"></i></button>
