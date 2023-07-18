@@ -237,13 +237,13 @@ const ContactForm = ({
                           </div>
                           <div className="contact-form-label">
                             <div className="form-item">
-                              <DatePicker selected={checkIn} onChange={(date) => setCheckIn(date)} className="input-name contact-lebel" placeholder="CHECK IN" />
+                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="CHECK IN" selected={checkIn} onChange={(date) => setCheckIn(date)} className="input-name contact-lebel" placeholder="CHECK IN" />
                               {errors?.checkIn && (
                                 <p className="error_msg">Check In cannot be empty.</p>
                               )}
                             </div>
                             <div className="form-item">
-                              <DatePicker selected={checkOut} minDate={checkIn} onChange={(date) => setCheckOut(date)} className="input-name contact-lebel" placeholder="CHECK OUT" />
+                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="CHECK OUT" selected={checkOut} minDate={checkIn} onChange={(date) => setCheckOut(date)} className="input-name contact-lebel" placeholder="CHECK OUT" />
                               {errors?.checkOut && (
                                 <p className="error_msg">Check Out cannot be empty.</p>
                               )}
