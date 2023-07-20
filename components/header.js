@@ -56,6 +56,24 @@ const Header = ({ navigation, global }) => {
   const closeMobMenu = (e) => {
     document.getElementById("mobMenu").classList.remove("collapse");
     document.getElementsByTagName("html")[0].classList.remove("hideScroll");
+    const submenuOne = document.getElementById('visit-text-wrap');
+    submenuOne.classList.remove('active');
+    const submenutwo = document.getElementById('see-more-text-mob');
+    submenutwo.classList.remove('active');
+  };
+
+  const toggleClassOne = (e) => {
+    const submenuOne = document.getElementById('visit-text-wrap');
+    submenuOne.classList.toggle('active');
+    const submenutwo = document.getElementById('see-more-text-mob');
+    submenutwo.classList.remove('active');
+  };
+
+  const toggleClassTwo = (e) => {
+    const submenutwo = document.getElementById('see-more-text-mob');
+    submenutwo.classList.toggle('active');
+    const submenuOne = document.getElementById('visit-text-wrap');
+    submenuOne.classList.remove('active');
   };
 
   return (
@@ -99,6 +117,7 @@ const Header = ({ navigation, global }) => {
                     </ul>
                   </div>
                   <div className={`mob-menu ${ toggleMenuClass ? "collapse" : ""}`} id="mobMenu">
+                    <a onClick={closeMobMenu} className="bg_click"></a>
                     <a onClick={closeMobMenu} className="model_close"><i className="fa-solid fa-xmark"></i></a>
                     <div className="mob-menu-inner">
                       <div className="mobMenuInner">
@@ -111,7 +130,7 @@ const Header = ({ navigation, global }) => {
                           /></Link>
                         </div>
                         <div className="underLogoLink">
-                          <div className="visit-text-wrap">
+                          <div className="visit-text-wrap" id="visit-text-wrap" onClick={toggleClassOne}>
                             <p>Visit Our Sites</p>
                             <p className="drop-down mb-drop">
                               <a href="#">
@@ -134,7 +153,7 @@ const Header = ({ navigation, global }) => {
                               ))}
                             </div>
                           </div>|
-                          <div className="see-more-text-mob">
+                          <div className="see-more-text-mob" id="see-more-text-mob" onClick={toggleClassTwo}>
                               <div className="see-more-text-wrap">
                                 <p>SEE MORE OPTIONS</p>
                                 <p className="drop-down">

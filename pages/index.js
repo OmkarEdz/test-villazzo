@@ -251,6 +251,7 @@ const Home = ({
         <h2 className="bookHead noMar">{homepage.attributes.HomeTabbing.Heading}</h2>
         <p className="bookDesc">{homepage.attributes.HomeTabbing.Content}</p>
         <div className="tabbing_wrapper">
+          <p className="leftIcon"><i className="fa-solid fa-angles-left"></i></p>
           <ul id="tabList" className="showTab0">
           {homepage.attributes.HomeTabs.map((item, index) => (
             <li className={`tabbing_item item${index}`} key={index} data-id={index}
@@ -267,6 +268,7 @@ const Home = ({
             </li>
           ))}
           </ul>
+          <p className="rightIcon"><i className="fa-solid fa-angles-right"></i></p>
           <div className="tab_content">
           {homepage.attributes.HomeTabs.map((tabitem, index) => (
             <div className={`tab_content_item tab_item${index}`} key={index}>

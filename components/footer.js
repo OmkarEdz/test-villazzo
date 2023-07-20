@@ -193,6 +193,16 @@ const Footer = ({ footerProp }) => {
                           key={`featuredImage${index}`}
                           layout="fill"
                           alt="footerImage"
+                          className="desktopImages"
+                        />
+                        <Image
+                          loader={myLoader}
+                          src={getStrapiMedia(
+                            fImage.MobImage
+                          )}
+                          layout="fill"
+                          alt="footerImage"
+                          className="mobileImages"
                         />
                       </div>
                     </a>
