@@ -169,7 +169,7 @@ img {
   width: 100% !important;
   height: 100% !important;
 }
-.homepage-image span img, .homepage-image video {
+.homepage-image img, .homepage-image video {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -919,7 +919,7 @@ h3.propertytxt {
 .dropdownMenu p a {transition: 0.5s all;font-size: 14px;font-family: "Lato",ui-sans-serif;text-transform: uppercase;margin: 0px;font-weight: 200;letter-spacing: 0.4px;color: #000;text-decoration: none;}
 .dropdownMenu p a:hover {color: #dac172;}
 .dropdownMenu p a > span {position: unset !important;}
-.dropdownMenu p a > span img {width: 230px !important;}
+.dropdownMenu p a > img {width: 230px !important;}
 .dropdownMenu p a > span:first-child img {width: 221px !important;height: 221px !important;object-fit: cover;}
 .dropdownMenu.dropdownMenuNew p a:hover {filter: brightness(0.8);}
 .dropdownMenu.dropdownMenuSeeMore {border-radius: 0px;padding: 0px 10px;left: -60px;}
@@ -983,7 +983,7 @@ h3.propertytxt {
 .tab_content {border: solid #ccc;border-width: 2px 0px;padding: 20px;text-align: left;margin-bottom: 30px;}
 .tabbing_item_icon {width: 75px;height: 75px;padding: 20px;margin:0 auto;overflow: hidden;border-radius: 50%;display: flex;align-items: center;justify-content: center;}
 .tabbing_wrapper ul .tabbing_item:hover .tabbing_item_icon {background-color: #f8de7f;}
-.tabbing_item_icon span, .tabbing_item_icon span img {position: unset !important;width:100% !important;}
+.tabbing_item_icon span, .tabbing_item_icon img {position: unset !important;width:100% !important;}
 .tabbing_wrapper ul .tabbing_item:hover .tabbing_item_icon img {filter: brightness(10);}
 .tab_content_item {display: none;}
 .tab_content_item_head {font-family: 'Lato' !important;font-weight: 700 !important;font-size: 18px;}
@@ -1019,7 +1019,7 @@ h3.propertytxt {
 .bookHead {font-size: 45px;margin-bottom: 60px;font-family: 'Gotham Light';}
 .bookItemImg {height: 50px;}
 .bookItemImg span {position: unset !important;}
-.bookItemImg span img {max-height: 45px !important;}
+.bookItemImg img {max-height: 45px !important;}
 .bookItemHead {font-size: 16px;font-weight: 600;font-family: 'Lato';min-height: 38px;margin-bottom: 10px;}
 .bookItemDesc {margin: 0px;font-family: 'Lato';font-size: 16px;letter-spacing: -0.5px;}
 .contBtn.inqury-btn {justify-content: space-around;}
@@ -1034,7 +1034,7 @@ h3.propertytxt {
 .insp_box_wrapper {display: flex;flex-wrap: wrap;}
 .insp_box_item {text-decoration: none;width: calc(30% - 12px);position: relative;padding: 55px 48px;margin:6px;display: flex;align-items: center;justify-content: center;background-position: bottom center;background-size: cover;}
 .insp_box_item.big_width {width: calc(70% - 12px);}
-.insp_box_item span img {object-fit: cover;object-position: center;}
+.insp_box_item img {object-fit: cover;object-position: center;}
 .insp_box_item:after {content: '';transition:0.5s all;position:absolute;left: 0;right: 0;width: 100%;height: 100%;top: 0;background: rgb(0 0 0 / 50%);}
 .insp_box_wrapper .insp_box_cont {font-family: 'Lato';position: relative !important;margin: 0px;text-align: center;color: #fff;font-size: 19px;z-index: 9;}
 .insp_box_item.big_width .insp_box_cont {max-width: 60%;margin: 0 auto;}
@@ -1046,7 +1046,7 @@ h3.propertytxt {
 .mainContainer.more_villas_wrap .bookHead.noMar {font-size: 40px;max-width: 73%;margin: 0 auto 10px;line-height: 90%;font-family: 'Gotham Light';}
 .mainContainer.more_villas_wrap .bookDesc {max-width: 85%;margin: auto;}
 .middleImg {margin: 15px 0px;}
-.middleImg span, .middleImg span img {position: unset !important;}
+.middleImg span, .middleImg img {position: unset !important;}
 .botMiniHead {font-size: 40px;max-width: 73%;margin: 0 auto 10px;line-height: 90%;font-family: 'Gotham Light';}
 .bookMiniDesc {font-size: 16px;font-family: 'Lato';margin: 0px auto 30px;max-width: 74%;}
 
@@ -1056,8 +1056,8 @@ h3.propertytxt {
 .gallery_row_first .mini_col {width: calc(26% - 12px);margin: 6px;}
 .gallery_row_first .big_col {width: calc(48% - 12px);margin: 6px;}
 .two_imgs .col_img:first-child {margin-bottom: 12px;}
-.gallery_row_first .mini_col .col_img span, .gallery_row_first .mini_col .col_img span img, .gallery_row_first .big_col .col_img span, .gallery_row_first .big_col .col_img span img {position: unset !important;height:100% !important;}
-.gallery_row_first .big_col .col_img span img, .gallery_row_first .mini_col .col_img span img {width:100% !important;object-fit: cover;object-position: center;}
+.gallery_row_first .mini_col .col_img span, .gallery_row_first .mini_col .col_img img, .gallery_row_first .big_col .col_img span, .gallery_row_first .big_col .col_img img {position: unset !important;height:100% !important;}
+.gallery_row_first .big_col .col_img img, .gallery_row_first .mini_col .col_img img {width:100% !important;object-fit: cover;object-position: center;}
 .gallery_row_first .col_img {margin: 0px;height: 100%;}
 .mini_col.grey_col {text-align: center;padding: 30px;background: #e2dfdfb4;display: flex;align-items: center;flex-direction: column;justify-content: center;}
 .mini_col.grey_col .contBtn.inqury-btn {margin: 0px;}
@@ -1177,7 +1177,7 @@ h3.propertytxt {
 }
 
 @media (min-width: 768px){
-  .middleImg span, .middleImg span img {min-width: 350px !important;}
+  .middleImg span, .middleImg img {min-width: 350px !important;}
 }
 
 @media only screen and (max-width: 1750px) {
@@ -1325,7 +1325,7 @@ h3.propertytxt {
   .mini_col.grey_col .col_content {margin: 15px 0px 20px;}
   .gallery_row_first .mini_col {width: calc(50% - 8px);margin: 4px;}
   .gallery_row_first .big_col {width: calc(100% - 8px);margin: 4px;}
-  .gallery_row_first .big_col .col_img span img, .gallery_row_first .mini_col .col_img span img {max-height: 300px !important;}
+  .gallery_row_first .big_col .col_img img, .gallery_row_first .mini_col .col_img img {max-height: 300px !important;}
   .insp_box_item {width: calc(50% - 8px);min-height: 250px;margin: 4px;}
   .insp_box_item.big_width {width: calc(100% - 8px);}
   .bookHead {font-size: 35px;margin-bottom: 45px;}
@@ -1341,7 +1341,7 @@ h3.propertytxt {
   .bookItem {width: 50%;padding: 20px;}
   .bookItemImg {height: 40px;}
   .bookItemImg span {height: 100% !important;}
-  .bookItemImg span img {height: 100% !important;}
+  .bookItemImg img {height: 100% !important;}
   .tabbing_wrapper {max-width: 90%;}
 
   .search_wrapper form input {min-width: 250px;}
@@ -1739,7 +1739,7 @@ h3.propertytxt {
   .gallery_row_first .mini_col {width: 100%;margin: 4px 0px;}
   .mini_col.grey_col {padding: 40px;}
   .contBtn.inqury-btn a {width: max-content;margin: auto;}
-  .gallery_row_first .big_col .col_img span img, .gallery_row_first .mini_col .col_img span img {max-height: 220px !important;}
+  .gallery_row_first .big_col .col_img img, .gallery_row_first .mini_col .col_img img {max-height: 220px !important;}
   .bookMiniDesc {max-width: 100%;}
   .bookItem {width: 100%;padding: 20px 0px;}
   .bookItemHead {min-height: auto;font-size: 18px;}
@@ -1760,7 +1760,7 @@ h3.propertytxt {
   .dropdownMenu.dropdownMenuSeeMore ul li {margin: 15px 0px;}
   .dropdownMenu.dropdownMenuSeeMore {width: 200px;left:-50px;}
   .dropdownMenu.dropdownMenuSeeMore ul {padding:0px;}
-  .middleImg span, .middleImg span img {width: 100% !important;}
+  .middleImg span, .middleImg img {width: 100% !important;}
   .underLogoLink {margin-top: 10px;}
   .visit-text-wrap:hover .dropdownMenu.dropdownMen1uNew {top:23px;padding:0px 10px;}
   .mob-menu .mob-menu-inner .dropdownMenu.dropdownMenuNew p {margin:10px 0px;overflow: hidden;}
