@@ -141,7 +141,7 @@ const Home = ({
         <div className="search_wrapper">
           <p>SEARCH THE FINEST VILLA IN THE BEST LOCATION</p>
           <form action="submit">
-            <input type="text" />
+            <input type="text" className="search-input" />
             <div className="locWrapper">
               <ul>
                 <li><a href="https://test.villazzo.com/rental-villas/aspen">Aspen</a></li>

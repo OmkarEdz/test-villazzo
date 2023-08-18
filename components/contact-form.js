@@ -280,7 +280,7 @@ const ContactForm = ({
                           <div className="final_msg_wrap">
                             {showSuccessMessage && (
                               <p className="thankyou_msg">
-                                Thank you for your message! A team member from Villazzo Realty will get back to you shortly.
+                                Thank you for your message! A team member from Villazzo will get back to you shortly.
                               </p>
                             )}
                             {showFailureMessage && (
