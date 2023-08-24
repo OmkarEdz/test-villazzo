@@ -420,7 +420,7 @@ img {
   justify-content: space-between;
 }
 .visit-text-wrap:hover p, .visit-text-wrap:hover .drop-down a {color: #f8de7f;}
-.inqury-btn a {
+.inqury-btn a, .submit_btn_wrap button {
   color: #000;
     text-decoration: none;
     background-color: #f8de7f;
@@ -433,7 +433,7 @@ img {
     border: 1px solid #f8de7f;
     letter-spacing: -0.5px;
 }
-.inqury-btn a:hover {
+.inqury-btn a:hover, .submit_btn_wrap button:hover {
   color: #000;background-color: #fff;
 }
 .bg-light {
@@ -895,8 +895,9 @@ h3.propertytxt {
 .final_msg_wrap .thankyou_msg {position: relative;bottom: unset;margin: 30px 0px 0px;padding: 20px;background: #0080007a;text-align: center;color: #fff;max-width:445px;line-height: 35px;font-weight: 400;font-family: "Lato",ui-sans-serif;font-size: 22px;}
 .input-name:placeholder{font-size: 14px;}
 .contact-form h2{font-size: 55px;text-align: center;font-weight: 300;padding-bottom: 20px;}
-.submit_btn_wrap button {color: #000;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 7px 35px;font-size: 14px;text-transform: uppercase;letter-spacing: 0px;line-height: 20px;font-weight: 400;font-family: "Lato",ui-sans-serif;}
-.submit_btn_wrap button:hover{background-color: #fff;color: #000;border: 1px solid #f8de7f;}
+/* .submit_btn_wrap button {color: #000;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 7px 35px;font-size: 14px;text-transform: uppercase;letter-spacing: 0px;line-height: 20px;font-weight: 400;font-family: "Lato",ui-sans-serif;}
+.submit_btn_wrap button:hover{background-color: #fff;color: #000;border: 1px solid #f8de7f;} */
+.submit_btn_wrap button {padding: 8px 25px;}
 .popup-submit-btn{margin-top: 15px;}
 .contact-lebel{font-size:14px;background-color:#fff ;width: 100%;border: 1px solid #f8de7f;padding: 5px 10px;color: #000;}
 .contact-lebel::placeholder{font-size: 14px;}
@@ -962,16 +963,16 @@ h3.propertytxt {
 .search_wrapper {display: flex;align-items: flex-end;padding: 10px 30px;background: rgb(255 255 255 / 90%);position: absolute;width: 100%;bottom: 0px;justify-content: center;}
 .search_wrapper p {margin: 0px;font-family: 'Lato',sans-serif;font-weight: 300;}
 .search_wrapper form {position: relative;}
-.search_wrapper form input {background: transparent;border-width: 0px 0px 2px;margin-left: 10px;border-color:#ccc;padding: 0px 30px 0px 0px;min-width: 400px;}
+.search_wrapper form input {background: transparent;border:1px solid #ccc;margin-left: 10px;border-width:0px 0px 1px;padding: 0px 30px 0px 0px;min-width: 400px;}
 .search_wrapper form input:focus {outline: 0px;}
-.search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;}
+.search_wrapper form button {background: transparent;border: 0px;position: absolute;right: 0px;top:-2px;pointer-events: none;}
 .search_wrapper form button:hover {color: #f8de7f;}
 .search_wrapper form button i {color: #000;}
-.locWrapper {display:none;position: absolute;background: #fff;right: 0px;width: calc(100% - 10px);list-style: none;margin: 0px;box-shadow: 0px 0px 10px 0px #ccc;}
+.locWrapper {position: absolute;background: #fff;right: 0px;width: calc(100% - 10px);list-style: none;margin: 0px;box-shadow: 0px 0px 10px 0px #ccc;}
 .locWrapper ul {list-style: none;margin: 0px;padding: 0px;}
 .locWrapper ul li a {font-family: 'Gotham Light';transition: 0.5s all; width: 100%;display: block;padding: 10px 15px;line-height: 1;text-decoration: none;color: #000;}
 .locWrapper ul li a:hover {color: #f8de7f;}
-.search_wrapper form input:focus ~ .locWrapper {display: block;}
+.search_wrapper form .locWrapper.active {display: block;}
 
 /* Home Tabs section start here */
 .mainContainer.tabbing_sec_wrapper {max-width: 1200px;}
@@ -1249,7 +1250,7 @@ h3.propertytxt {
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 14px;line-height: 14px;}
   .sell-btn a {padding: 10px 0;width: 140px;font-size: 14px;line-height: 14px;}
   .see-more-text p, .visit-text-wrap >p:first-child, .see-more-text-mob .see-more-text-wrap p {font-size: 10px;}
-  .inqury-btn a {line-height: 14px;font-size: 14px;}
+  .inqury-btn a, .submit_btn_wrap button {line-height: 14px;font-size: 14px;}
   .see-more-text p.drop-down, .visit-text p.drop-down {font-size: 12px;}
   .toll-wrap {width: 90%;}
   .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p, .navigate-wrap p, .navigate-sec1 a, .toll-wrap a {font-size: 12px;}
@@ -1372,7 +1373,7 @@ h3.propertytxt {
   .see-more-text {
     margin-top: 0px;
   }
-  .inqury-btn a {
+  .inqury-btn a, .submit_btn_wrap button {
     padding:10px 30px;
   }
   .header-content {
@@ -1561,7 +1562,7 @@ h3.propertytxt {
   .row > div.search-icon-box {margin-top: 30px;}
   .main-logo img {width: 80% !important;}
   .footer-img:hover {transform: unset;}
-  .inqury-btn a {display: block;text-align: center;letter-spacing: 0;font-size: 14px;letter-spacing: 1px;padding: 10px 15px;}
+  .inqury-btn a, .submit_btn_wrap button {display: block;text-align: center;letter-spacing: 0;font-size: 14px;letter-spacing: 1px;padding: 10px 15px;}
   .tabbing_wrapper {padding: 0px 25px;}
   .leftIcon, .rightIcon {display: block;}
 }
@@ -1607,7 +1608,7 @@ h3.propertytxt {
     order: 1;
     width:100%;
   }
-  .inqury-btn a {
+  .inqury-btn a, .submit_btn_wrap button {
     display:block;
     text-align: center;
     font-size: 14px;
@@ -1631,7 +1632,7 @@ h3.propertytxt {
   .desktop-inquiry-call, .see-more-text {
     display:none;
   }
-  .inqury-btn a:hover, .inqury-btn a:focus {
+  .inqury-btn a:hover, .inqury-btn a:focus, .submit_btn_wrap button:hover {
     color: #000;
     background-color: #f8de7f;
   }
@@ -1772,6 +1773,7 @@ h3.propertytxt {
   .see-more-text p, .visit-text-wrap >p:first-child, .see-more-text-mob .see-more-text-wrap p {pointer-events: none;}
   .insp_box_wrapper .insp_box_cont {font-size: 18px;}
   .locWrapper {width: 100%;}
+  .inquiry a {padding-left: 0px;}
 }
 
 @media only screen and (max-width: 430px) {
@@ -1805,6 +1807,11 @@ h3.propertytxt {
   .footer-page-links {flex-direction: column;justify-content: center;align-items: center;}
   .footer-images {flex-wrap: wrap;}
   .footer-img {width: 100%;}
+}
+
+@media only screen and (max-width: 375px) {
+  .search_wrapper p{font-size:13px;}
+  .mob-menu-inner {padding:20px 10px;}
 }
 
 @media not all and (min-resolution:.001dpcm)

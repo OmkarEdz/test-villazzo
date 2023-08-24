@@ -275,7 +275,7 @@ const ContactForm = ({
                             <input type="text" className="" placeholder="What is 2+2 ?" />
                           </div> */}
                           <div className="submit_btn_wrap">
-                            <button type="submit" >Submit</button>
+                            <button type="submit" >SUBMIT</button>
                           </div>
                           <div className="final_msg_wrap">
                             {showSuccessMessage && (

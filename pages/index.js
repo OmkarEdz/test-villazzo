@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import { fetchAPI } from "../lib/api"
@@ -42,10 +42,39 @@ const Home = ({
     document.getElementById("popover").classList.add("show_popup");
   };
 
+  const onSearchCllick = (e) => {
+    document.getElementById("locWrapper").classList.add("active");
+  };
+
   function onhoverTabbng(event) {
     document.getElementById('tabList').classList = '';
     document.getElementById('tabList').classList.add('showTab' + event.currentTarget.getAttribute("data-id"));
   }
+
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -140,9 +169,10 @@ const Home = ({
 
         <div className="search_wrapper">
           <p>SEARCH THE FINEST VILLA IN THE BEST LOCATION</p>
-          <form action="submit">
+          <form action="submit" onClick={toggleDropdown} id="searchForm">
             <input type="text" className="search-input" />
-            <div className="locWrapper">
+            {isOpen && (
+            <div className="locWrapper" id="locWrapper" ref={dropdownRef} >
               <ul>
                 <li><a href="https://test.villazzo.com/rental-villas/aspen">Aspen</a></li>
                 <li><a href="https://test.villazzo.com/rental-villas/miami">Miami</a></li>
@@ -151,6 +181,7 @@ const Home = ({
                 <li><a href="https://test.villazzo.com/rental-villas/ibiza">Ibiza</a></li>
               </ul>
             </div>
+            )}
             <button type="submit"><i className="fas fa-search"></i></button>
           </form>
         </div>
