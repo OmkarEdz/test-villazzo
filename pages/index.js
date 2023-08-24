@@ -174,11 +174,11 @@ const Home = ({
             {isOpen && (
             <div className="locWrapper" id="locWrapper" ref={dropdownRef} >
               <ul>
-                <li><a href="https://test.villazzo.com/rental-villas/aspen">Aspen</a></li>
-                <li><a href="https://test.villazzo.com/rental-villas/miami">Miami</a></li>
-                <li><a href="https://test.villazzo.com/rental-villas/saint-tropez">Saint-Tropez</a></li>
-                <li><a href="https://test.villazzo.com/rental-villas/mykonos">Mykonos</a></li>
-                <li><a href="https://test.villazzo.com/rental-villas/ibiza">Ibiza</a></li>
+                <li><a href="https://www.villazzo.com/rental-villas/aspen">Aspen</a></li>
+                <li><a href="https://www.villazzo.com/rental-villas/miami">Miami</a></li>
+                <li><a href="https://www.villazzo.com/rental-villas/saint-tropez">Saint-Tropez</a></li>
+                <li><a href="https://www.villazzo.com/rental-villas/mykonos">Mykonos</a></li>
+                <li><a href="https://www.villazzo.com/rental-villas/ibiza">Ibiza</a></li>
               </ul>
             </div>
             )}
