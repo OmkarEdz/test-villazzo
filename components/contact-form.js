@@ -174,7 +174,7 @@ const ContactForm = ({
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
-                                placeholder="FIRST NAME" 
+                                placeholder="First Name" 
                                 type="text"
                                 value={fullname}
                                 onChange={(e) => {
@@ -189,7 +189,7 @@ const ContactForm = ({
                             </div>
                             <div className="form-item">
                               <input
-                                placeholder="LAST NAME" 
+                                placeholder="Last Name" 
                                 name="lastName"
                                 type="text"
                                 value={lastName}
@@ -206,7 +206,7 @@ const ContactForm = ({
                           <div className="contact-form-label">
                             <div className="form-item">
                               <input
-                                placeholder="PHONE" 
+                                placeholder="Phone" 
                                 type="tel"
                                 name="phone"
                                 pattern="[0-9]*"
@@ -221,7 +221,7 @@ const ContactForm = ({
                             </div>
                             <div className="form-item">
                               <input
-                                placeholder="EMAIL ADDRESS" 
+                                placeholder="Email" 
                                 type="email"
                                 name="email"
                                 value={email}
@@ -237,13 +237,13 @@ const ContactForm = ({
                           </div>
                           <div className="contact-form-label">
                             <div className="form-item">
-                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="CHECK IN" selected={checkIn} onChange={(date) => setCheckIn(date)} className="input-name contact-lebel" placeholder="CHECK IN" />
+                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="Check In" selected={checkIn} onChange={(date) => setCheckIn(date)} className="input-name contact-lebel" placeholder="CHECK IN" />
                               {errors?.checkIn && (
                                 <p className="error_msg">Check In cannot be empty.</p>
                               )}
                             </div>
                             <div className="form-item">
-                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="CHECK OUT" selected={checkOut} minDate={checkIn} onChange={(date) => setCheckOut(date)} className="input-name contact-lebel" placeholder="CHECK OUT" />
+                              <DatePicker dateFormat="dd/MM/yyyy" placeholderText="Check Out" selected={checkOut} minDate={checkIn} onChange={(date) => setCheckOut(date)} className="input-name contact-lebel" placeholder="CHECK OUT" />
                               {errors?.checkOut && (
                                 <p className="error_msg">Check Out cannot be empty.</p>
                               )}
@@ -257,14 +257,14 @@ const ContactForm = ({
                                 onChange={(e) => {
                                   setMessage(e.target.value);
                                 }}
-                                className="form-message contact-lebel" rows="4" cols="50" placeholder="COMMENTS">
+                                className="form-message contact-lebel" rows="4" cols="50" placeholder="Comments">
                               </textarea>
                               {errors?.message && (
                                 <p className="error_msg">Message cannot be empty.</p>
                               )}
                             </div>
                           </div>
-                          {/* <div className="contact-form-label contact-form-label-footer">
+                          <div className="contact-form-label contact-form-label-footer">
                             <div className="checkBoxWrap">
                               <input type="checkbox" value="email-check" />
                               Email me your monthly newsletter
@@ -273,7 +273,7 @@ const ContactForm = ({
                           <div className="contact-form-label contact-form-label-footer">
                             <p>Confirm that you are not a Robot:</p>
                             <input type="text" className="" placeholder="What is 2+2 ?" />
-                          </div> */}
+                          </div>
                           <div className="submit_btn_wrap">
                             <button type="submit" >SUBMIT</button>
                           </div>
