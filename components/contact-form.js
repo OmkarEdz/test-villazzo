@@ -266,8 +266,8 @@ const ContactForm = ({
                           </div>
                           <div className="contact-form-label contact-form-label-footer">
                             <div className="checkBoxWrap">
-                              <input type="checkbox" value="email-check" />
-                              Email me your monthly newsletter
+                              <input type="checkbox" value="email-check"  id="newsletter" />
+                              <label for="newsletter">Email me your monthly newsletter</label>
                             </div>
                           </div>
                           <div className="contact-form-label contact-form-label-footer">

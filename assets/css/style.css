@@ -884,7 +884,7 @@ h3.propertytxt {
 .custom_model {position: fixed;width: 100%;height: 100%;left: 0px;top: 0px;z-index: 999;background: rgb(0 0 0 / 60%);overflow: auto;padding: 0;align-items: center;justify-content: center;display:none;}
 .show_popup .custom_model {display: flex;}
 .custom_model_content {max-height: calc(100vh - 105px) !important;overflow-y: auto;position: relative;background-color: #fff;padding: 20px 28px;box-shadow: 0px 0px 10px 0px #777;width: 400px;margin: auto;}
-.model_close {position: relative;width: auto;height: auto;right: 0;top: -10px;transition: .5s all;line-height: 1;font-size: 25px;color: #f8de7f;float: right;margin-bottom: 0px;}
+.model_close {position: absolute;width: auto;height: auto;right: 10px;top: 0px;transition: .5s all;line-height: 1;font-size: 1.25em;color: #f8de7f;float: right;margin-bottom: 0px;}
 .model_close:hover {color: #000;}
 .model_close img {width: 15px;}  
 .contact-form-label{display: flex;justify-content: space-between;flex-direction: column;font-family: Lato;}
@@ -897,7 +897,8 @@ h3.propertytxt {
 .contact-form h2{font-size: 55px;text-align: center;font-weight: 300;padding-bottom: 20px;}
 /* .submit_btn_wrap button {color: #000;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 7px 35px;font-size: 14px;text-transform: uppercase;letter-spacing: 0px;line-height: 20px;font-weight: 400;font-family: "Lato",ui-sans-serif;}
 .submit_btn_wrap button:hover{background-color: #fff;color: #000;border: 1px solid #f8de7f;} */
-.submit_btn_wrap button {padding: 8px 25px;}
+.submit_btn_wrap {text-align: center;}
+.submit_btn_wrap button {padding: 8px 45px;}
 .popup-submit-btn{margin-top: 15px;}
 .contact-lebel{font-size:14px;background-color:#fff ;width: 100%;border: 1px solid #f8de7f;padding: 5px 10px;color: #000;}
 .contact-lebel::placeholder{font-size: 14px;}
@@ -907,6 +908,32 @@ h3.propertytxt {
 .contact-form-label.contact-form-label-footer p {margin: 0px 0px 8px;}
 .contact-form-label.contact-form-label-footer ~ .submit_btn_wrap {margin-top: 25px;}
 .contact-form-label.contact-form-label-footer input {border: 1px solid #f8de7f;padding: 5px 10px;}
+.contact-form-label.contact-form-label-footer .checkBoxWrap input {padding: 0;height: initial;width: initial;margin-bottom: 0;display: none;cursor: pointer;}
+.contact-form-label.contact-form-label-footer .checkBoxWrap label {position: relative;cursor: pointer;}
+.contact-form-label.contact-form-label-footer .checkBoxWrap label:before {
+  content: '';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #f7dd7f;
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.contact-form-label.contact-form-label-footer .checkBoxWrap input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 .contact-form-label .form-item .react-datepicker-wrapper {width: 100%;}
 /* Contact popup css end */
 
