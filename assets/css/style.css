@@ -1769,7 +1769,7 @@ h3.propertytxt {
   .homeTestiCotainer h3 {font-size: 28px;margin-bottom: 20px;line-height: 1.2;}
   .gallery_row_first .mini_col {width: 100%;margin: 4px 0px;}
   .mini_col.grey_col {padding: 40px;}
-  .contBtn.inqury-btn a {width: max-content;margin: auto;}
+  .contBtn.inqury-btn a {width: max-content;margin: auto;letter-spacing: -.5px !important;font-weight: 500 !important;line-height: 14px !important;padding: 8px 15px !important;}
   .gallery_row_first .big_col .col_img img, .gallery_row_first .mini_col .col_img img {max-height: 220px !important;}
   .bookMiniDesc {max-width: 100%;}
   .bookItem {width: 100%;padding: 20px 0px;}
