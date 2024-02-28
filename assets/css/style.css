@@ -1805,12 +1805,13 @@ h3.propertytxt {
   .inquiry a {padding-left: 0px;}
 
   .custom_model_content {max-width: 80%;width: unset;}
-  .contact-lebel {overflow:hidden;padding: 0.5rem; height: 30px; border-style: solid; border-width: thin; font-family: Lato; display: inline-block; color: black;}
+  .contact-lebel {border-radius: 0px;overflow:hidden;padding: 0.5rem; height: 30px; border-style: solid; border-width: thin; font-family: Lato; display: inline-block; color: black;}
   textarea.contact-lebel {padding: 5px 8px 74px !important;}
   .contact-form-label.contact-form-label-footer .checkBoxWrap label {display: flex;align-items: center;}
   .contact-form-label.contact-form-label-footer .checkBoxWrap label, .contact-form-label.contact-form-label-footer p, .contact-form-label.contact-form-label-footer input {font-size: 14px;color: #000;}
   .contact-form-label.contact-form-label-footer ~ .submit_btn_wrap {margin-top: 20px;}
   .contact-form-label.contact-form-label-footer ~ .submit_btn_wrap button {min-width: 202px; font-family: 'Lato' !important;width: max-content;margin: auto;letter-spacing: -.5px !important;font-weight: 500 !important;line-height: 14px !important;padding: 8px 15px !important;}
+  .contact-form-label.contact-form-label-footer .checkBoxWrap input:checked + label:after {top:3px;}
 }
 
 @media only screen and (max-width: 430px) {
